@@ -1,0 +1,19 @@
+# Python virtual environment
+venv/
+.env/
+
+# Environment variables
+.env
+
+# Tests folder
+tests/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS files
+.DS_Store
+Thumbs.db
