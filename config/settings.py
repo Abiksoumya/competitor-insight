@@ -51,6 +51,18 @@ class Settings(BaseSettings):
     CLAUDE_MAX_TOKENS: int = 4000
     MAX_REVIEWS:    int = 50
     CLAUDE_MODEL: str = "anthropic/claude-opus-4-5"
+    # Database
+    DATABASE_URL: str
+
+    # JWT
+    JWT_SECRET_KEY:                str
+    JWT_ALGORITHM:                 str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES:   int = 30
+    REFRESH_TOKEN_EXPIRE_DAYS:     int = 7
+
+    # Admin seed user
+    ADMIN_EMAIL:    str = "admin@competitor-intel.com"
+    ADMIN_PASSWORD: str = "ChangeMe123!"
 
 
     class Config:

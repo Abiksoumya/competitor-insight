@@ -5,17 +5,8 @@ from typing import Optional
 from enum import Enum
 
 
-class JobStatus(str, Enum):
-    """
-    Why inherit from both str AND Enum?
-    - Enum: gives you the fixed set of values
-    - str:  makes it JSON serializable automatically
-    Without str, FastAPI would fail to serialize JobStatus.DONE to JSON.
-    """
-    QUEUED  = "queued"
-    RUNNING = "running"
-    DONE    = "done"
-    FAILED  = "failed"
+from shared.types import JobStatus  # ← import from single source of truth
+
 
 
 class AnalyzeResponse(BaseModel):

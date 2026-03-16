@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datetime import datetime
 
-from app.api.models.response_models import JobStatus
+from shared.types import JobStatus
 
 
 @dataclass
